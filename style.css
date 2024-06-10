@@ -61,10 +61,12 @@ input[type="submit"] {
 input[type="submit"]:hover {
     background-color: #0056b3;
 }
+/* O restante do seu CSS continua o mesmo */
 
 .resultado-confirmacao {
     display: flex;
     flex-direction: column;
+    align-items: flex-start; /* Alinha os elementos à esquerda */
     width: calc(50% - 20px); /* Calcula a largura para ocupar metade do espaço entre as divs */
 }
 
@@ -75,4 +77,8 @@ input[type="submit"]:hover {
     border-radius: 8px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     margin-bottom: 20px; /* Adiciona espaço entre as divs */
+}
+
+.confirmar-pedido {
+    margin-top: 20px; /* Adiciona espaço acima do botão */
 }
