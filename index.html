@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+
+    <title>Festa Pronta</title>
+</head>
+<body>
+    <header>
+        <h1>PROMOÇÃO DE SÃO JOÃO!</h1>
+        <p>Tudo pela metade do preço!</p>
+    </header>
+    <main>
+        <form id="pedido-form">
+            <label for="nome">Seu Nome:</label>
+            <input type="text" id="nome" name="nome" placeholder="Nome completo" required>
+    
+            <label for="baloes">Número de Balões:</label>
+            <input type="number" id="baloes" name="baloes" placeholder="Número de balões" required>
+
+            <label for="bolo">Mensagem no Bolo:</label>
+            <input type="text" id="bolo" name="bolo" placeholder="Mensagem do bolo" required>
+           
+            <label>Terá Música?</label>
+            <div class="radio-group">
+                <input type="radio" id="sim" name="concorda" value="sim" required>
+                <label for="sim">Sim</label>
+            </div>
+            <div class="radio-group">
+                <input type="radio" id="nao" name="concorda" value="nao" required>
+                <label for="nao">Não</label>
+            </div>
+        
+            <label for="email">Digite seu E-mail:</label>
+            <input type="email" id="email" name="email" placeholder="E-mail para contato" required>
+    
+            <label for="telefone">Digite seu telefone:</label>
+            <input type="tel" id="telefone" name="telefone" placeholder="Telefone para contato" required>
+    
+            <input type="submit" value="Enviar">
+        </form>
+
+        <div id="pedido-info" class="pedido-info"></div>
+        <button id="confirmar-pedido" class="confirmar-pedido" style="display: none;">Confirmar Pedido</button>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
