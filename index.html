@@ -13,37 +13,56 @@
         <p>Tudo pela metade do preço!</p>
     </header>
     <main>
-        <form id="pedido-form">
-            <label for="nome">Seu Nome:</label>
-            <input type="text" id="nome" name="nome" placeholder="Nome completo" required>
-    
-            <label for="baloes">Número de Balões:</label>
-            <input type="number" id="baloes" name="baloes" placeholder="Número de balões" required>
+        <div class="formulario">
+            <form id="pedido-form">
+                <div class="opcoes">
+                    <label for="nome">Seu Nome:</label>
+                    <input type="text" id="nome" name="nome" placeholder="Nome completo" required>
+                </div>
+                <div class="opcoes">
+                    <label for="baloes">Número de Balões:</label>
+                    <input type="number" id="baloes" name="baloes" placeholder="Número de balões" required>
+                </div>
+                <div class="opcoes">
+                    <label for="bolo">Mensagem no Bolo:</label>
+                    <input type="text" id="bolo" name="bolo" placeholder="Mensagem do bolo" required>
+                </div>
+                <div class="opcoes">
+                    <label>Terá Música?</label>
+                    <div class="radio-group">
+                        <input type="radio" id="sim" name="concorda" value="sim" required>
+                        <label for="sim">Sim</label>
+                    </div>
+                    <div class="radio-group">
+                        <input type="radio" id="nao" name="concorda" value="nao" required>
+                        <label for="nao">Não</label>
+                    </div>
+                </div>
+                <div class="opcoes">
+                    <label for="email">Digite seu E-mail:</label>
+                    <input type="email" id="email" name="email" placeholder="E-mail para contato" required>
+                </div>
+                <div class="opcoes">
+                    <label for="telefone">Digite seu telefone:</label>
+                    <input type="tel" id="telefone" name="telefone" placeholder="Telefone para contato" required>
+                </div>
+                <div class="opcoes">
+                    <input type="submit" value="Enviar">
+                </div>
+            </form>
+        </div>
 
-            <label for="bolo">Mensagem no Bolo:</label>
-            <input type="text" id="bolo" name="bolo" placeholder="Mensagem do bolo" required>
-           
-            <label>Terá Música?</label>
-            <div class="radio-group">
-                <input type="radio" id="sim" name="concorda" value="sim" required>
-                <label for="sim">Sim</label>
-            </div>
-            <div class="radio-group">
-                <input type="radio" id="nao" name="concorda" value="nao" required>
-                <label for="nao">Não</label>
-            </div>
+       
+        <div id="resultado-pedido" class="resultado-pedido" style="display: none;">
+            <!-- Aqui serão exibidos os resultados do pedido -->
+        </div>
         
-            <label for="email">Digite seu E-mail:</label>
-            <input type="email" id="email" name="email" placeholder="E-mail para contato" required>
-    
-            <label for="telefone">Digite seu telefone:</label>
-            <input type="tel" id="telefone" name="telefone" placeholder="Telefone para contato" required>
-    
-            <input type="submit" value="Enviar">
-        </form>
-
         <div id="pedido-info" class="pedido-info"></div>
         <button id="confirmar-pedido" class="confirmar-pedido" style="display: none;">Confirmar Pedido</button>
+
+        <div id="pedido-confirmado" class="pedido-confirmado" style="display: none;">
+            <!-- Aqui será exibida a imagem de pedido feito após confirmar o pedido -->
+        </div>
     </main>
 
     <script src="script.js"></script>

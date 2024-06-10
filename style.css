@@ -17,37 +17,34 @@ header {
 main {
     flex-grow: 1;
     display: flex;
-    justify-content: center;
+    justify-content: space-between; /* Alinha o formulário e a div de resultados */
     align-items: center;
     background-color: #f0f0f0;
-}
-
-form {
-    background-color: #fff;
     padding: 20px;
-    border-radius: 8px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    width: 300px;
 }
 
-label {
-    display: block;
+.formulario {
+    width: 300px; /* Definindo largura para o formulário */
+}
+
+.opcoes {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 15px;
+}
+
+.opcoes label {
     margin-bottom: 8px;
     font-weight: bold;
 }
 
 .radio-group {
-    margin-bottom: 15px;
+    display: flex;
+    flex-direction: row;
 }
 
-.radio-group input[type="radio"],
-.radio-group label {
-    display: inline-block;
-}
-
-/* Aplicando margem inferior à div que envolve os botões de rádio */
-.radio-group {
-    margin-bottom: 10px;
+input[type="radio"] {
+    margin-right: 10px;
 }
 
 input[type="submit"] {
@@ -63,4 +60,19 @@ input[type="submit"] {
 
 input[type="submit"]:hover {
     background-color: #0056b3;
+}
+
+.resultado-confirmacao {
+    display: flex;
+    flex-direction: column;
+    width: calc(50% - 20px); /* Calcula a largura para ocupar metade do espaço entre as divs */
+}
+
+.resultado-pedido,
+.pedido-confirmado {
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px; /* Adiciona espaço entre as divs */
 }
